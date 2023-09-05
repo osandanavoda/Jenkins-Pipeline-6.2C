@@ -2,10 +2,10 @@ pipeline {
 agent any
 
 stages {
-stage('Build') {
+stage("build") {
     steps {
         // Using Maven
-        sh 'mvn clean package'
+        sh "mvn clean install"
     }
 }
 
