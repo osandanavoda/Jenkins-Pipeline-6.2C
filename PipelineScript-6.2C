@@ -27,7 +27,18 @@ pipeline {
                   // Run Postman/Newman tests for API
                 echo 'Unit and Integration Tests Stage Completed!'
             }
+        
+
+	 post {
+            always{
+            // Send email notification on Tests success
+                mail to: "upali0125ramani@gmail.com",
+                subject: "The Test has completed successfully",
+                body: "Test stage complete!"
+            }
         }
+    }
+
         stage('Code Analysis') {
             steps {
                 echo 'Starting Code Analysis Stage...'
@@ -43,7 +54,18 @@ pipeline {
                 // ZAP scanner command 
                 echo 'Security Scan Stage Completed!'
             }
+        
+
+	 post {
+            always{
+            // Send email notification on Security Scan success
+                mail to: "upali0125ramani@gmail.com",
+                subject: "The Security Scan is completed successfully",
+                body: "Security Scan complete!"
+            }
         }
+    }
+
         stage('Deploy to Staging') {
             steps {
                 echo 'Starting Deploy to Staging Stage...'
