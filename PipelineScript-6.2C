@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Starting Build Stage...'
                 // Use Maven 
-                echo 'sh hmvn clean install'
+                echo 'sh mvn clean install'
                 echo 'Build Stage Completed!'
             }
 	 post {
@@ -14,7 +14,7 @@ pipeline {
             // Send email notification on pipeline success
                 mail to: "upali0125ramani@gmail.com",
                 subject: "The pipeline has completed successfully",
-                body: "	Build log attached!"
+                body: "Build stafe complete!"
             }
         }
     
@@ -76,7 +76,7 @@ pipeline {
 			emailext attachLog: true,
 			to: "upali0125ramani@gmail.com",
 			subject: "The pipeline has completed successfully",
-			body: "	Build log attached!"
+			body: "	Final Build log attached!"
 		}
 	}
 }
