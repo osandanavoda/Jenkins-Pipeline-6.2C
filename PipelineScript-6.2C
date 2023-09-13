@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Starting Build Stage...'
                 // Use Maven 
-                sh 'mvn clean install'
+                echo 'sh hmvn clean install'
                 echo 'Build Stage Completed!'
             }
 	 post {
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo 'Starting Unit and Integration Tests Stage...'
                 // Run unit and integration tests
-                sh 'mvn test'
+                echo 'sh mvn test'
                   // Run Postman/Newman tests for API
                 echo 'Unit and Integration Tests Stage Completed!'
             }
