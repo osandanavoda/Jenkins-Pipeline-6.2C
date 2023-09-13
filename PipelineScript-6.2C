@@ -71,4 +71,12 @@ pipeline {
         }
     
     }
+	post{
+		finally{
+			emailext attachLog: true,
+			to: "upali0125ramani@gmail.com",
+			subject: "The pipeline has completed successfully",
+			body: "	Build log attached!"
+		}
+	}
 }
