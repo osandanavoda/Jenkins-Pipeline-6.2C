@@ -7,7 +7,7 @@ pipeline {
                 echo 'Starting Build Stage...'
                 // Use Maven 
                 echo 'sh mvn clean install'
-                echo 'Build Stafe Completed!'
+                echo 'Build Stage Completed!'
             }
 	 post {
             always{
