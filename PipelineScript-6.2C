@@ -43,7 +43,7 @@ pipeline {
             steps {
                 echo 'Starting Code Analysis Stage...'
                  // Integrate with SonarQube for code analysis
-                // SonarQube scanner command 
+                // SonarQube scanner command //
                 echo 'Code Analysis Stage Completed!'
             }
         }
