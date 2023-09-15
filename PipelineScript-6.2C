@@ -33,7 +33,7 @@ pipeline {
             always{
             // Send email notification on Tests success
                 mail to: "upali0125ramani@gmail.com",
-                subject: "The Test has completed successfully",
+                subject: "The Test is completed successfully",
                 body: "Test stage complete!"
             }
         }
