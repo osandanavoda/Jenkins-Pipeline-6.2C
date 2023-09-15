@@ -7,14 +7,14 @@ pipeline {
                 echo 'Starting Build Stage...'
                 // Use Maven 
                 echo 'sh mvn clean install'
-                echo 'Build Stage Completed'
+                echo 'Build Stage Completed!'
             }
 	 post {
             always{
             // Send email notification on pipeline success
                 mail to: "upali0125ramani@gmail.com",
                 subject: "The pipeline has completed successfully",
-                body: "Build stafe complete!"
+                body: "Build stage complete!"
             }
         }
     
